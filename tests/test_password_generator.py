@@ -1,4 +1,5 @@
 from lib.password_generator import Password_generator
+import string
 
 '''
 When I call #generate_password
@@ -20,7 +21,7 @@ def test_returned_password_has_3_instances_of_special_characters():
     password_generator = Password_generator()
     password = password_generator.generate_password()
     count = 0
-    required_characters = ['!', '@', '£', '#', '$', '%', '^', '&', '*', '`', '~', ',', '.', '/', '<', '>', '?']
+    required_characters = string.punctuation
     for letter in password:
         if letter in required_characters:
             count+=1

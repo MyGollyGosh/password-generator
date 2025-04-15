@@ -10,5 +10,6 @@ class Password_generator:
         while len(password) < 21:
             password.append(random.choice(string.ascii_letters))
             password.append(random.choice(string.punctuation))
+            password.append(random.choice(string.digits))
         self.used_passwords.append(password)
         return ''.join(password)
